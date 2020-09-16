@@ -1,0 +1,38 @@
+.start-form {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    border: 1px black solid;
+    padding: 5px;
+}
+.start-form button {
+    width: 50%;
+    }
+
+#result {
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    margin-left: -250px;
+    width: 500px;
+    height: 100%;
+    text-align: center;
+    border-top: 1px black solid;
+    border-left: 1px black solid;
+    border-right: 1px black solid;
+}
+.line {
+    width: 94%;
+    text-align: left;
+    background-color: cadetblue;
+    margin: 0px 5px 5px 5px;
+    padding: 10px;
+}
+
+.entry {
+    position: relative;
+    width: 200px;
+    padding: 2px;
+    margin: 2px;
+    border: 1px solid black
+}
