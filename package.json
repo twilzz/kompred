@@ -1,0 +1,23 @@
+{
+  "name": "kompder",
+  "version": "1.0.0",
+  "description": "form for calculating CP",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/twilzz/kompred.git"
+  },
+  "author": "twils",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/twilzz/kompred/issues"
+  },
+  "homepage": "https://github.com/twilzz/kompred#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "json-server": "^0.16.1"
+  }
+}
