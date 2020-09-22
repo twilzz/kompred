@@ -10,12 +10,13 @@
 </head>
 <body>
 <div class="header">
+    <div class="slyder-nav" id="minus"><<</div>
     <div class="slyder">
-        <div class="slyde1">Показ первого слайда</div>
-        <div class="slyde2">Показ второго слайда</div>
-        <div class="slyde3">Показ третьего слайда</div>
-        <div class="slyder-nav"> <= 1/3 =></div>
+        <div class="slyde">Показ первого слайда</div>
+        <div class="slyde" style="display: none;">Показ второго слайда</div>
+        <div class="slyde" style="display: none;">Показ третьего слайда</div>
     </div>
+    <div class="slyder-nav" id="plus">>></div>
 </div>
 <div>
 <form class="start-form">
@@ -31,7 +32,18 @@
 <div id="result">
     <p>В расчете участвуют следующие позиции:</p>
 </div>
-
+<div class="bottom">
+    <div class="slyder-nav" id="minus-btm"><<</div>
+<div class="slyder-wraper">
+    <div class="slyder-inner">
+    <div class="slyde-btm"><img src="./img/1.png"></div>
+    <div class="slyde-btm"><img src="./img/2.png"></div>
+    <div class="slyde-btm"><img src="./img/3.png"></div>
+    <div class="slyde-btm"><img src="./img/4.png"></div>
+    </div>
+</div>
+<div class="slyder-nav" id="plus-btm">>></div>
+</div></div>
     <script src='./js/index.js'></script>
 </body>
 </html>
