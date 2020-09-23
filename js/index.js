@@ -94,24 +94,62 @@ const slydesBottom = document.querySelectorAll('.slyde-btm'),
       stepRightBtm = document.querySelector('#plus-btm'),
       sliderWrapper = document.querySelector('.slyder-wraper'),
       slyderInner = document.querySelector('.slyder-inner'),
+      navDots = document.querySelector('.nav-dots'),
       width = window.getComputedStyle(sliderWrapper).width;
 let offset = 0;
 slyderInner.style.width = 100 * slydesBottom.length+'%';
 slydesBottom.forEach(slide => slide.style.width = width);
 
+function createNavDots (a) {
+    for (let i=0; i< a; i++) {
+        let navDot = document.createElement('div');
+        navDot.classList.add('nav-dot');
+        navDots.appendChild(navDot);
+    }
+}
+
+
+createNavDots(slydesBottom.length);
+const navDotsGenerated = document.querySelectorAll('.nav-dot');
+console.log(navDotsGenerated);
+let counter = 0;
+navDotsGenerated[counter].classList.add('nav-dots-active');
 stepRightBtm.addEventListener('click',()=> {
     if (offset == +width.slice(0, width.length-2) * (slydesBottom.length - 1)) {
+        counter = 0;
         offset = 0;
+        console.log(offset,counter);
     } else {
         offset += +width.slice(0, width.length-2);
+        counter ++;
+        console.log(offset,counter);
     }
+    navDotsGenerated.forEach(item => item.classList.remove('nav-dots-active'));
+    navDotsGenerated[counter].classList.add('nav-dots-active');
     slyderInner.style.transform = `translateX(-${offset}px)`;
 });
 stepLeftBtm.addEventListener('click',()=> {
     if (offset == 0) {
         offset = +width.slice(0, width.length-2) * (slydesBottom.length - 1);
+        counter = slydesBottom.length-1;
+        console.log(offset,counter);
     } else {
         offset -= +width.slice(0, width.length-2);
+        counter --; 
+        console.log(offset,counter);
     }
+    navDotsGenerated.forEach(item => item.classList.remove('nav-dots-active'));
+    navDotsGenerated[counter].classList.add('nav-dots-active');
     slyderInner.style.transform = `translateX(-${offset}px)`;
+});
+
+navDotsGenerated.forEach((item, id) => {
+    item.addEventListener('click',() => {
+        counter = id;
+        offset = +width.slice(0, width.length-2) * id;
+        navDotsGenerated.forEach(item => item.classList.remove('nav-dots-active'));
+        navDotsGenerated[counter].classList.add('nav-dots-active');
+        slyderInner.style.transform = `translateX(-${offset}px)`;
+    });
+
 });

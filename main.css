@@ -85,3 +85,18 @@
     display: flex;
     transition: 0.5s all;
 }
+
+.nav-dot {
+    width: 15px;
+    height: 5px;
+    background-color: black;
+    margin-left: 5px;
+}
+.nav-dots {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-dots-active {
+    background-color: chocolate;
+}
