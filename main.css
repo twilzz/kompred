@@ -4,10 +4,25 @@
     flex-direction: column;
     border: 1px black solid;
     padding: 5px;
+    margin-top: 10px;
 }
+
 .start-form button {
     width: 50%;
-    }
+}
+
+.data-inputs {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    border: 1px black solid;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.data-inputs input {
+    margin-top: 5px;
+}
 
 #result {
     position: relative;
@@ -21,6 +36,7 @@
     border-left: 1px black solid;
     border-right: 1px black solid;
 }
+
 .line {
     width: 94%;
     text-align: left;
@@ -32,7 +48,7 @@
 .entry {
     position: relative;
     width: 200px;
-    
+
     margin: 2px;
     border: 1px solid black
 }
@@ -46,8 +62,9 @@
     height: 50px;
     border: 1px black solid;
     margin-bottom: 5px;
-    
+
 }
+
 .slyder-nav {
     border: 1px solid;
     padding: 5px;
@@ -56,14 +73,17 @@
     cursor: pointer;
     border-radius: 5px;
     z-index: 1000;
-} 
+}
+
 .slyder-nav:hover {
     background-color: cyan;
 }
+
 .slyde {
     border: solid 1px;
     padding: 5px;
 }
+
 .bottom {
     display: flex;
     flex-direction: row;
@@ -81,6 +101,7 @@
     width: 300px;
     overflow: hidden;
 }
+
 .slyder-inner {
     display: flex;
     transition: 0.5s all;
@@ -92,6 +113,7 @@
     background-color: black;
     margin-left: 5px;
 }
+
 .nav-dots {
     display: flex;
     justify-content: center;
